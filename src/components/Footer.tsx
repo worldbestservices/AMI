@@ -67,8 +67,8 @@ const Footer = () => {
   ];
 
   const resources = [
-    { name: 'Whitepaper', url: 'https://www.amicoin.io/Doc/AMI.pdf' },
-    { name: 'Audit Report', url: 'https://www.amicoin.io/Doc/AMMYI_Audit.pdf' },
+    { name: 'Whitepaper', url: 'AMI.pdf' },
+    { name: 'Audit Report', url: '/AMI.pdf' },
     { name: 'Terms of Service', url: '#' },
     { name: 'Privacy Policy', url: '#' },
   ];
@@ -250,7 +250,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               </div>
               <div className="flex items-center space-x-6 text-sm">
                 <a
-                  href="https://www.amicoin.io/Doc/AMI.pdf"
+                  href="AMI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#f3d779] transition-colors"

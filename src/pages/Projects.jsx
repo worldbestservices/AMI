@@ -67,7 +67,7 @@ const Projects = () => {
       description: "Decentralized exchange platform for seamless token trading",
       status: "Live",
       features: ["Multi-chain support", "Low fees", "High liquidity"],
-      link: "https://amicoin.io/User/Buy-now.aspx"
+      link: "https://amicoin.io/buyami/User/Buy-now.aspx"
     },
     {
       title: "NFTrees Platform",
@@ -81,7 +81,7 @@ const Projects = () => {
       description: "Advanced staking platform with multiple reward tiers",
       status: "Live",
       features: ["24% APY", "Flexible terms", "Auto-compound"],
-      link: "https://amicoin.io/staking"
+      link: "https://stak.amicoin.io/"
     },
     {
       title: "Mobile Wallet",
@@ -94,10 +94,10 @@ const Projects = () => {
 
 
   const handleBuyAmi =() =>{
-    window.open("https://amicoin.io/User/Buy-now.aspx","_blank")
+    window.open("https://amicoin.io/buyami/User/Buy-now.aspx","_blank")
   }
   const handleExploreEcosystem = () =>{
-    window.open("https://www.amicoin.io/Doc/AMI.pdf","_blank")
+    window.open("AMI.pdf","_blank")
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-void-black via-midnight-blue to-void-black">

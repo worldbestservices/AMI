@@ -6,7 +6,7 @@ const handleJoinCommunity = ()=>{
 }
 
 const handleLearnMore =() =>{
-  window.open("https://www.amicoin.io/Doc/AMI.pdf","_blank");
+  window.open("AMI.pdf","_blank");
 }
 
 const AboutHero = () => {
@@ -70,9 +70,11 @@ const AboutHero = () => {
             <button  onClick={handleLearnMore} className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
               Learn More
             </button>
+            <a href="" target='_blank'>
             <button  onClick={handleJoinCommunity} className="bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300">
               Join Community
             </button>
+            </a>
           </div>
         </div>
       </div>

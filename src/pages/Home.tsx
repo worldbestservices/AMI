@@ -220,7 +220,7 @@ const Home = () => {
                 transition={{ delay: 0.6 }}
               >
                 <a
-                  href="https://amicoin.io/buyami/User/Buy-now.aspx"
+                  href="https://stak.amicoin.io/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cyber-button px-6 md:px-8 py-3 md:py-4 rounded-cyber font-rajdhani font-bold text-base md:text-lg hover:scale-105 transition-transform duration-300"
@@ -420,7 +420,7 @@ https://stak.amicoin.io/" target='_blank'
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 w-full md:w-[800px] lg:w-[1200px] mx-auto">
             {ecosystemPages.map((page, index) => (
               <motion.div
                 key={index}

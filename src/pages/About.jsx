@@ -121,7 +121,7 @@ const About = () => {
             Join AMMYI and be a part of the most transformative movement in the decentralized economy.
           </p>
           <a
-            href="https://www.amicoin.io/Doc/AMI.pdf" target="_blank"
+            href="AMI.pdf" target="_blank"
             className="inline-block px-6 py-3 rounded-lg bg-electric-gold/10 text-electric-gold font-semibold hover:bg-electric-gold/20 transition-all border border-electric-gold/30"
           >
             Read Our Whitepaper

@@ -68,7 +68,7 @@ const Steps = () => {
   ];
 
   const handleBuyNow = () => {
-    window.open("https://amicoin.io/User/Buy-now.aspx", "_blank");
+    window.open("https://amicoin.io/buyami/User/Buy-now.aspx", "_blank");
   };
   const startStackinghandler = () =>{
     window.open("https://stak.amicoin.io/","_blank");
@@ -78,7 +78,7 @@ const Steps = () => {
   }
 
   const handleDownloadGuide = () =>{
-    window.open("https://www.amicoin.io/Doc/AMI.pdf","_blank");
+    window.open("AMI.pdf","_blank");
   }
 
   return (

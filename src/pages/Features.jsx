@@ -19,7 +19,7 @@
 // } from "lucide-react";
 
 // const handleViewDoc = () => {
-//   window.open("https://www.amicoin.io/Doc/AMI.pdf", "_blank")
+//   window.open("AMI.pdf", "_blank")
 // }
 
 // const FeatureBlock = ({
@@ -151,7 +151,7 @@
 //       icon: CheckCircle,
 //       action: {
 //         text: "Download Audit Report",
-//         link: "https://www.amicoin.io/Doc/AMMYI_Audit.pdf",
+//         link: "/AMI.pdf",
 //       },
 //     },
 //     {
@@ -498,7 +498,7 @@ import {
 import { Link } from "react-router-dom";
 
 const handleViewDoc = () => {
-  window.open("https://www.amicoin.io/Doc/AMI.pdf", "_blank");
+  window.open("AMI.pdf", "_blank");
 };
 
 // const FeatureBlock = ({
@@ -698,7 +698,7 @@ const Features = () => {
       icon: CheckCircle,
       action: {
         text: "Download Audit Report",
-        link: "https://www.amicoin.io/Doc/AMMYI_Audit.pdf",
+        link: "/AMI.pdf",
       },
     },
     {

@@ -66,6 +66,10 @@ const Tokenomics = () => {
     window.open("https://nftrees.amicoin.io/mint","_blank");
   }
 
+  const handleBuyAmi = () =>{
+    window.open("https://amicoin.io/buyami/User/Buy-now.aspx","_blank")
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-void-black via-midnight-blue to-void-black">
       {/* Hero Section */}
@@ -327,7 +331,9 @@ const Tokenomics = () => {
                 Start your journey with AMMYI tokens and become part of the quantum finance revolution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="cyber-button group rounded-cyber py-3 px-8">
+                <button 
+                onClick={handleBuyAmi}
+                className="cyber-button group rounded-cyber py-3 px-8">
                   <div className='flex justify-center itmes-center '>
                     <Coins className="w-5 h-5 mr-2 group-hover:animate-orbital-rotation" />
                     Buy AMMYI

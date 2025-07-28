@@ -52,7 +52,6 @@ const Navbar = () => {
 
       {/* Cyber scan line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-electric-gold to-transparent animate-scan-line" />
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
@@ -113,7 +112,8 @@ const Navbar = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4 ml-0 sm:ml-[50px] md:ml-[300px] lg:ml-0
+">
             <a
               href="https://amicoin.io/buyami/User/Buy-now.aspx"
               target="_blank"
@@ -200,7 +200,7 @@ const Navbar = () => {
                     className="block w-full glass-panel border-glow-purple px-6 py-4 rounded-cyber font-rajdhani font-semibold text-cyber-purple text-base"
                   >
                     <span className="flex items-center justify-center">
-                      <Leaf className="h-5 w-5 mr-2" />
+                      <Leaf className="h-5 w-5 mr-0" />
                       VISIT NFTREES
                     </span>
                   </a>
