@@ -197,9 +197,9 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="absolute top-6 right-6 sm:top-10 sm:right-10 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 holographic-card rounded-quantum flex items-center justify-center"
-                The Future of
-                <Coins className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-electric-gold animate-neural-pulse" />
+              >
+                The Future of{' '}
+                <span className="text-gradient-gold">
                   Quantum Finance
                 </span>
               </motion.h1>
