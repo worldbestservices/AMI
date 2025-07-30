@@ -198,8 +198,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                The Future of
-                <br />
+                The Future of{' '}
                 <span className="text-gradient-gold">
                   Quantum Finance
                 </span>
@@ -211,7 +210,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                Experience the next evolution of DeFi with quantum-powered staking, neural network security, and environmental sustainability. Join the revolution that's reshaping digital finance.
+                Experience the next evolution of decentralized finance with quantum-powered security, neural network optimization, and sustainable environmental impact through our revolutionary blockchain ecosystem.
               </motion.p>
 
               <motion.div
