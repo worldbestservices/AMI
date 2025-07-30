@@ -175,7 +175,7 @@ const Home = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto preserve-3d">
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -198,7 +198,8 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                The Future of{' '}
+                The Future of
+                <br />
                 <span className="text-gradient-gold">
                   Quantum Finance
                 </span>
@@ -208,9 +209,9 @@ const Home = () => {
                 className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 font-rajdhani break-words leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 holographic-card rounded-quantum flex items-center justify-center"
+                transition={{ delay: 0.4 }}
               >
-                <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-quantum-cyan animate-neural-pulse" />
+                Experience the next evolution of DeFi with quantum-powered staking, environmental NFTs, and revolutionary blockchain technology. Join the future of sustainable digital finance.
               </motion.p>
 
               <motion.div
@@ -232,15 +233,15 @@ const Home = () => {
                 </a>
                 
                 <Link
-                  to="https://youtu.be/vNXglsMoGvM?si=vTWHE6B_zsfqzL1P
-https://stak.amicoin.io/" target='_blank'
+                  to="https://youtu.be/vNXglsMoGvM?si=vTWHE6B_zsfqzL1P"
+                  target='_blank'
                   className="glass-panel border-glow-purple px-6 md:px-8 py-3 md:py-4 rounded-cyber font-rajdhani font-bold text-base md:text-lg text-cyber-purple hover:bg-cyber-purple/10 transition-all duration-300 hover:scale-105"
                 >
                   <span className="flex items-center justify-center">
                     <Play className="mr-2 h-5 w-5" />
-                className="absolute top-1/2 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 holographic-card rounded-full flex items-center justify-center"
+                    WATCH DEMO
                   </span>
-                <Brain className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-cyber-purple animate-neural-pulse" />
+                </Link>
               </motion.div>
 
               {/* Enhanced Stats */}
@@ -295,9 +296,9 @@ https://stak.amicoin.io/" target='_blank'
                     rotateZ: [0, 180, 360]
                   }}
                   transition={{ duration: 6, repeat: Infinity }}
-                  className="absolute top-10 right-10 w-20 h-20 holographic-card rounded-quantum flex items-center justify-center"
+                  className="absolute top-6 right-6 sm:top-10 sm:right-10 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 holographic-card rounded-quantum flex items-center justify-center"
                 >
-                  <Coins className="h-10 w-10 text-electric-gold animate-neural-pulse" />
+                  <Coins className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-electric-gold animate-neural-pulse" />
                 </motion.div>
                 
                 <motion.div
@@ -306,9 +307,9 @@ https://stak.amicoin.io/" target='_blank'
                     rotateZ: [360, 180, 0]
                   }}
                   transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute bottom-10 left-10 w-16 h-16 holographic-card rounded-quantum flex items-center justify-center"
+                  className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 holographic-card rounded-quantum flex items-center justify-center"
                 >
-                  <BarChart3 className="h-8 w-8 text-quantum-cyan animate-neural-pulse" />
+                  <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-quantum-cyan animate-neural-pulse" />
                 </motion.div>
 
                 <motion.div
@@ -317,19 +318,19 @@ https://stak.amicoin.io/" target='_blank'
                     rotateY: [0, 360, 0]
                   }}
                   transition={{ duration: 8, repeat: Infinity }}
-                  className="absolute top-1/2 -right-8 w-12 h-12 holographic-card rounded-full flex items-center justify-center"
+                  className="absolute top-1/2 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 holographic-card rounded-full flex items-center justify-center"
                 >
-                  <Brain className="h-6 w-6 text-cyber-purple animate-neural-pulse" />
+                  <Brain className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-cyber-purple animate-neural-pulse" />
                 </motion.div>
 
                 {/* Central Quantum Core */}
-                <div className="relative z-10 w-80 h-80 mx-auto holographic-card rounded-full flex items-center justify-center">
+                <div className="relative z-10 w-full aspect-square max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto holographic-card rounded-full flex items-center justify-center">
                   <motion.div 
-                    className="w-60 h-60 bg-gradient-to-br from-electric-gold via-quantum-cyan to-cyber-purple rounded-full flex items-center justify-center relative overflow-hidden"
+                    className="w-3/4 aspect-square bg-gradient-to-br from-electric-gold via-quantum-cyan to-cyber-purple rounded-full flex items-center justify-center relative overflow-hidden"
                     animate={{ rotateZ: 360 }}
                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                   >
-                    <Wallet className="h-32 w-32 text-void-black relative z-10" />
+                    <Wallet className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-32 lg:w-32 text-void-black relative z-10" />
                     
                     {/* Inner energy rings */}
                     <div className="absolute inset-4 border-2 border-white/30 rounded-full animate-pulse-glow" />
@@ -341,8 +342,8 @@ https://stak.amicoin.io/" target='_blank'
                         key={i}
                         className="absolute w-2 h-2 bg-white rounded-full"
                         animate={{
-                          x: [0, Math.cos(i * Math.PI / 4) * 80],
-                          y: [0, Math.sin(i * Math.PI / 4) * 80],
+                          x: [0, Math.cos(i * Math.PI / 4) * 40],
+                          y: [0, Math.sin(i * Math.PI / 4) * 40],
                           opacity: [0, 1, 0],
                         }}
                         transition={{
@@ -420,7 +421,6 @@ https://stak.amicoin.io/" target='_blank'
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 w-full md:w-[800px] lg:w-[1200px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {ecosystemPages.map((page, index) => (
               <motion.div
@@ -509,13 +509,13 @@ https://stak.amicoin.io/" target='_blank'
               </motion.div>
             ))}
           </div>
-              <div className="relative z-10 w-full aspect-square max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto holographic-card rounded-full flex items-center justify-center">
+        </div>
       </section>
-                  className="w-3/4 aspect-square bg-gradient-to-br from-electric-gold via-quantum-cyan to-cyber-purple rounded-full flex items-center justify-center relative overflow-hidden"
+
       {/* Enhanced Testimonials */}
       <section className="relative z-10 py-20 px-4">
         <div className="container mx-auto max-w-7xl">
-                  <Wallet className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-32 lg:w-32 text-void-black relative z-10" />
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -527,8 +527,8 @@ https://stak.amicoin.io/" target='_blank'
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-rajdhani break-words leading-relaxed">
               Join thousands of satisfied users who have already experienced the benefits of AMMYI's innovative DeFi ecosystem
             </p>
-                        x: [0, Math.cos(i * Math.PI / 4) * 40],
-                        y: [0, Math.sin(i * Math.PI / 4) * 40],
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
