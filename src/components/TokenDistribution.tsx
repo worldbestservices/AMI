@@ -297,7 +297,7 @@ const TokenDistribution: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="w-96 h-96 mx-auto relative">
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg aspect-square mx-auto relative">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -306,8 +306,8 @@ const TokenDistribution: React.FC = () => {
                     cy="50%"
                     labelLine={false}
                     label={renderCustomLabel}
-                    outerRadius={140}
-                    innerRadius={60}
+                    outerRadius="40%"
+                    innerRadius="15%"
                     fill="#8884d8"
                     dataKey="percentage"
                     animationBegin={0}
@@ -328,9 +328,9 @@ const TokenDistribution: React.FC = () => {
               
               {/* Center Circle with Total Supply */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none ">
-                <div className="w-24 h-24 rounded-full bg-void-black border-2 border-electric-gold flex items-center justify-center animate-pulse-glow">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-void-black border-2 border-electric-gold flex items-center justify-center animate-pulse-glow">
                   <div className="text-center">
-                  <div className="text-xl font-orbitron font-bold text-electric-gold">100M</div>
+                  <div className="text-sm sm:text-base md:text-lg lg:text-xl font-orbitron font-bold text-electric-gold">100M</div>
                   </div>
                 </div>
               </div>
@@ -388,37 +388,37 @@ const TokenDistribution: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="data-terminal p-6 text-center">
-            <div className="text-2xl font-orbitron font-bold text-plasma-green mb-2">
+            <div className="text-xl sm:text-2xl font-orbitron font-bold text-plasma-green mb-2">
               Immediate
             </div>
             <div className="text-gray-400 font-rajdhani mb-4">
               Staking & Liquidity
             </div>
-            <div className="text-lg text-electric-gold">
+            <div className="text-base sm:text-lg text-electric-gold">
               60% (60M AMMYI)
             </div>
           </div>
 
           <div className="data-terminal p-6 text-center">
-            <div className="text-2xl font-orbitron font-bold text-quantum-cyan mb-2">
+            <div className="text-xl sm:text-2xl font-orbitron font-bold text-quantum-cyan mb-2">
               6 Months
             </div>
             <div className="text-gray-400 font-rajdhani mb-4">
               Team & Development
             </div>
-            <div className="text-lg text-electric-gold">
+            <div className="text-base sm:text-lg text-electric-gold">
               20% (20M AMMYI)
             </div>
           </div>
 
           <div className="data-terminal p-6 text-center">
-            <div className="text-2xl font-orbitron font-bold text-hologram-pink mb-2">
+            <div className="text-xl sm:text-2xl font-orbitron font-bold text-hologram-pink mb-2">
               12 Months
             </div>
             <div className="text-gray-400 font-rajdhani mb-4">
               Reserve & Marketing
             </div>
-            <div className="text-lg text-electric-gold">
+            <div className="text-base sm:text-lg text-electric-gold">
               20% (20M AMMYI)
             </div>
           </div>

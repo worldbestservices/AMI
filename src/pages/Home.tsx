@@ -175,7 +175,7 @@ const Home = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <motion.div
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto preserve-3d">
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -197,9 +197,9 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-              >
+                className="absolute top-6 right-6 sm:top-10 sm:right-10 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 holographic-card rounded-quantum flex items-center justify-center"
                 The Future of
-                <span className="block text-gradient-gold animate-fade-in-slide-up animation-delay-300 break-words">
+                <Coins className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-electric-gold animate-neural-pulse" />
                   Quantum Finance
                 </span>
               </motion.h1>
@@ -208,9 +208,9 @@ const Home = () => {
                 className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 font-rajdhani break-words leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+                className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 holographic-card rounded-quantum flex items-center justify-center"
               >
-                Experience neural-speed transactions, quantum-secured staking up to 24% APY, and join the eco-conscious blockchain revolution with AMMYI Coin.
+                <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-quantum-cyan animate-neural-pulse" />
               </motion.p>
 
               <motion.div
@@ -238,9 +238,9 @@ https://stak.amicoin.io/" target='_blank'
                 >
                   <span className="flex items-center justify-center">
                     <Play className="mr-2 h-5 w-5" />
-                    NEURAL DEMO
+                className="absolute top-1/2 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 holographic-card rounded-full flex items-center justify-center"
                   </span>
-                </Link>
+                <Brain className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-cyber-purple animate-neural-pulse" />
               </motion.div>
 
               {/* Enhanced Stats */}
@@ -421,6 +421,7 @@ https://stak.amicoin.io/" target='_blank'
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 w-full md:w-[800px] lg:w-[1200px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {ecosystemPages.map((page, index) => (
               <motion.div
                 key={index}
@@ -508,13 +509,13 @@ https://stak.amicoin.io/" target='_blank'
               </motion.div>
             ))}
           </div>
-        </div>
+              <div className="relative z-10 w-full aspect-square max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto holographic-card rounded-full flex items-center justify-center">
       </section>
-
+                  className="w-3/4 aspect-square bg-gradient-to-br from-electric-gold via-quantum-cyan to-cyber-purple rounded-full flex items-center justify-center relative overflow-hidden"
       {/* Enhanced Testimonials */}
       <section className="relative z-10 py-20 px-4">
         <div className="container mx-auto max-w-7xl">
-          <motion.div
+                  <Wallet className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-32 lg:w-32 text-void-black relative z-10" />
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -526,8 +527,8 @@ https://stak.amicoin.io/" target='_blank'
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-rajdhani break-words leading-relaxed">
               Join thousands of satisfied users who have already experienced the benefits of AMMYI's innovative DeFi ecosystem
             </p>
-          </motion.div>
-
+                        x: [0, Math.cos(i * Math.PI / 4) * 40],
+                        y: [0, Math.sin(i * Math.PI / 4) * 40],
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
