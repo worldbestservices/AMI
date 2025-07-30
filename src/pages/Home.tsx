@@ -211,7 +211,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                Experience the next evolution of DeFi with quantum-powered staking, environmental NFTs, and revolutionary blockchain technology. Join the future of sustainable digital finance.
+                Experience the next evolution of DeFi with quantum-powered staking, neural network security, and environmental sustainability. Join the revolution that's reshaping digital finance.
               </motion.p>
 
               <motion.div
@@ -296,9 +296,9 @@ const Home = () => {
                     rotateZ: [0, 180, 360]
                   }}
                   transition={{ duration: 6, repeat: Infinity }}
-                  className="absolute top-6 right-6 sm:top-10 sm:right-10 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 holographic-card rounded-quantum flex items-center justify-center"
+                  className="absolute top-10 right-10 w-20 h-20 holographic-card rounded-quantum flex items-center justify-center"
                 >
-                  <Coins className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-electric-gold animate-neural-pulse" />
+                  <Coins className="h-10 w-10 text-electric-gold animate-neural-pulse" />
                 </motion.div>
                 
                 <motion.div
@@ -307,9 +307,9 @@ const Home = () => {
                     rotateZ: [360, 180, 0]
                   }}
                   transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 holographic-card rounded-quantum flex items-center justify-center"
+                  className="absolute bottom-10 left-10 w-16 h-16 holographic-card rounded-quantum flex items-center justify-center"
                 >
-                  <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-quantum-cyan animate-neural-pulse" />
+                  <BarChart3 className="h-8 w-8 text-quantum-cyan animate-neural-pulse" />
                 </motion.div>
 
                 <motion.div
@@ -318,19 +318,19 @@ const Home = () => {
                     rotateY: [0, 360, 0]
                   }}
                   transition={{ duration: 8, repeat: Infinity }}
-                  className="absolute top-1/2 -right-4 sm:-right-6 md:-right-8 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 holographic-card rounded-full flex items-center justify-center"
+                  className="absolute top-1/2 -right-8 w-12 h-12 holographic-card rounded-full flex items-center justify-center"
                 >
-                  <Brain className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-cyber-purple animate-neural-pulse" />
+                  <Brain className="h-6 w-6 text-cyber-purple animate-neural-pulse" />
                 </motion.div>
 
                 {/* Central Quantum Core */}
-                <div className="relative z-10 w-full aspect-square max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto holographic-card rounded-full flex items-center justify-center">
+                <div className="relative z-10 w-80 h-80 mx-auto holographic-card rounded-full flex items-center justify-center">
                   <motion.div 
-                    className="w-3/4 aspect-square bg-gradient-to-br from-electric-gold via-quantum-cyan to-cyber-purple rounded-full flex items-center justify-center relative overflow-hidden"
+                    className="w-60 h-60 bg-gradient-to-br from-electric-gold via-quantum-cyan to-cyber-purple rounded-full flex items-center justify-center relative overflow-hidden"
                     animate={{ rotateZ: 360 }}
                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                   >
-                    <Wallet className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-32 lg:w-32 text-void-black relative z-10" />
+                    <Wallet className="h-32 w-32 text-void-black relative z-10" />
                     
                     {/* Inner energy rings */}
                     <div className="absolute inset-4 border-2 border-white/30 rounded-full animate-pulse-glow" />
@@ -342,8 +342,8 @@ const Home = () => {
                         key={i}
                         className="absolute w-2 h-2 bg-white rounded-full"
                         animate={{
-                          x: [0, Math.cos(i * Math.PI / 4) * 40],
-                          y: [0, Math.sin(i * Math.PI / 4) * 40],
+                          x: [0, Math.cos(i * Math.PI / 4) * 80],
+                          y: [0, Math.sin(i * Math.PI / 4) * 80],
                           opacity: [0, 1, 0],
                         }}
                         transition={{
