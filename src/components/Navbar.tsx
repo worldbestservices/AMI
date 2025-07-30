@@ -134,7 +134,7 @@ const Navbar = () => {
             >
               <span className="flex items-center">
                 <Leaf className="h-4 w-4 mr-2 text-green-500" />
-                <span className="hidden lg:inline">NFTREES</span>
+                <span className="hidden lg:inline text-green-500">NFTREES</span>
                 <span className="lg:hidden">NFT</span>
               </span>
             </a>
@@ -199,7 +199,7 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     className="block w-full glass-panel border-glow-purple px-6 py-4 rounded-cyber font-rajdhani font-semibold text-cyber-purple text-base"
                   >
-                    <span className="flex items-center justify-center">
+                    <span className="flex items-center justify-center gap-2 text-green-500">
                       <Leaf className="h-5 w-5 mr-0" />
                       VISIT NFTREES
                     </span>

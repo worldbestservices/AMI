@@ -13,6 +13,8 @@ import {
   ExternalLink
 } from 'lucide-react';
 
+import YouTubePlayerWithOverlay from '../components/YouTubePlayerWithOverlay'
+
 const Steps = () => {
   const [activeStep, setActiveStep] = useState(1);
 
@@ -382,45 +384,9 @@ const Steps = () => {
           </motion.div>
         )}
 
-        {/* Video Tutorial Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto mt-16"
-        >
-          <div className="holographic-card p-8 text-center">
-            <h2 className="text-3xl font-orbitron font-bold text-gradient-gold mb-4">
-              Watch Our Tutorial
-            </h2>
-            <p className="text-gray-400 font-rajdhani mb-8">
-              Follow along with our step-by-step video guide
-            </p>
 
-            <a href="https://www.youtube.com/watch?v=vNXglsMoGvM&t=4s" target='_blank'>
-            <div className="relative bg-gradient-to-br from-electric-gold/10 to-cyber-purple/10 rounded-cyber p-8 border border-electric-gold/20">
-              <div className="absolute inset-0 bg-black/50 rounded-cyber flex items-center justify-center">
-                <button className="w-20 h-20 bg-electric-gold/20 rounded-full flex items-center justify-center hover:bg-electric-gold/30 transition-all duration-300 hover:scale-110">
-                  <Play className="w-8 h-8 text-electric-gold ml-1" />
-                </button>
-              </div>
-              <div className="h-64 bg-gradient-to-br from-void-black to-midnight-blue rounded-cyber opacity-50"></div>
-            </div>
-            </a>
+<YouTubePlayerWithOverlay/>
 
-            <div className="mt-6 flex justify-center space-x-4">
-              <button onClick={handleWatchTutorial} className="cyber-button rounded-cyber py-3 px-8">
-                <div className='flex justify-center items-center gap-2'>
-                  <Play className="w-4 h-4" />
-                  <span>Watch Tutorial</span>
-                </div>
-              </button>
-              <button onClick={handleDownloadGuide} className="glass-panel border-glow-purple px-6 py-3 rounded-cyber hover:scale-105 transition-all duration-300">
-                <span className="font-rajdhani">Download Guide</span>
-              </button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </div>
   );

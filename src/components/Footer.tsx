@@ -68,7 +68,7 @@ const Footer = () => {
 
   const resources = [
     { name: 'Whitepaper', url: 'AMI.pdf' },
-    { name: 'Audit Report', url: '/AMI.pdf' },
+    { name: 'Audit Report', url: 'https://www.amicoin.io/buyami/Doc/AMMYI_Audit.pdf' },
     { name: 'Terms of Service', url: '#' },
     { name: 'Privacy Policy', url: '#' },
   ];
