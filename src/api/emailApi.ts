@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { EmailType } from '../types/email';
 
-const API_BASE_URL = 'http://localhost:5000/api/emails';
+const API_BASE_URL = 'https://test.amicoin.io/api/emails';
 
 // Add a new email
 export const addEmail = async (email: string): Promise<{ message: string; email: EmailType }> => {

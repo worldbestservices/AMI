@@ -275,3 +275,26 @@
     }
   }
 }
+
+
+@keyframes rgb-glow {
+  0% {
+    border-color: rgb(255, 0, 102);
+  }
+  33% {
+    border-color: rgb(0, 255, 204);
+  }
+  66% {
+    border-color: rgb(102, 0, 255);
+  }
+  100% {
+    border-color: rgb(255, 0, 102);
+  }
+}
+
+.border-rgb-glow {
+  border-width: 2px;
+  border-style: solid;
+  animation: rgb-glow 3s linear infinite;
+  border-radius: 0.75rem; /* or match your Tailwind rounded-cyber */
+}

@@ -168,6 +168,42 @@ const Home = () => {
     },
   ];
 
+  const glowVariants = {
+    initial: (custom: { color: string }) => ({
+      boxShadow: `0 0 0px ${custom.color}`,
+    }),
+    animate: (custom: { index: number; activeIndex: number; color: string }) => {
+      const isActive = custom.index === custom.activeIndex;
+      return {
+        boxShadow: isActive
+          ? [
+            `0 0 0px ${custom.color}`,
+            `0 0 10px ${custom.color}`,
+            `0 0 20px ${custom.color}`,
+            `0 0 10px ${custom.color}`,
+            `0 0 0px ${custom.color}`,
+          ]
+          : `0 0 0px ${custom.color}`,
+        transition: {
+          duration: isActive ? 2.5 : 0.5,
+          repeat: Infinity,
+          repeatDelay: 1,
+        },
+      };
+    },
+  };
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % 4); // total 4 buttons
+    }, 3000); // glow one for 3s then next
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Hero Section */}
@@ -203,7 +239,7 @@ const Home = () => {
                   Quantum Finance
                 </span>
               </motion.h1>
-              
+
               <motion.p
                 className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 font-rajdhani break-words leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
@@ -213,35 +249,92 @@ const Home = () => {
                 Experience the next evolution of decentralized finance with quantum-powered security, neural network optimization, and sustainable environmental impact through our revolutionary blockchain ecosystem.
               </motion.p>
 
-              <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <a
-                  href="https://stak.amicoin.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cyber-button px-6 md:px-8 py-3 md:py-4 rounded-cyber font-rajdhani font-bold text-base md:text-lg hover:scale-105 transition-transform duration-300"
+              {/* button  */}
+              <div className="w-full max-w-5xl mx-auto px-4">
+                <motion.div
+                  className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 mb-12"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
                 >
-                  <span className="flex items-center justify-center">
-                    <Rocket className="mr-2 h-5 w-5 animate-neural-pulse" />
-                    LAUNCH QUANTUM STAKING
-                  </span>
-                </a>
-                
-                <Link
-                  to="https://youtu.be/vNXglsMoGvM?si=vTWHE6B_zsfqzL1P"
-                  target='_blank'
-                  className="glass-panel border-glow-purple px-6 md:px-8 py-3 md:py-4 rounded-cyber font-rajdhani font-bold text-base md:text-lg text-cyber-purple hover:bg-cyber-purple/10 transition-all duration-300 hover:scale-105"
-                >
-                  <span className="flex items-center justify-center">
-                    <Play className="mr-2 h-5 w-5" />
-                    WATCH DEMO
-                  </span>
-                </Link>
-              </motion.div>
+                  {/* Button 1: LAUNCHED NFTrees Marketplace */}
+                  <motion.div
+                    custom={{ index: 0, activeIndex, color: '#00ff00' }} // green
+                    variants={glowVariants}
+                    initial="initial"
+                    animate="animate"
+                    className='cyber-rounded'
+                  >
+                    <Link
+                      to="https://nftrees.amicoin.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-green-500 text-green-500 glass-panel border-glow-purple w-full h-16 flex items-center justify-center text-center rounded-cyber font-rajdhani font-bold text-base md:text-lg text-cyber-purple hover:bg-cyber-purple/10 transition-all duration-300 hover:scale-105"
+                    >
+                      <Leaf className="text-green-500 mr-2 h-5 w-5 animate-neural-pulse" />
+                      LAUNCHED NFTrees Marketplace
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    custom={{ index: 1, activeIndex, color: '#ffff01' }} // cyber-purple-like
+                    variants={glowVariants}
+                    initial="initial"
+                    animate="animate"
+                    className='cyber-rounded'
+                  >
+                    {/* Button 2: LAUNCH QUANTUM STAKING */}
+                    <Link
+                      to="https://stak.amicoin.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cyber-button w-full h-16 flex items-center justify-center text-center rounded-cyber font-rajdhani font-bold text-base md:text-lg hover:scale-105 transition-transform duration-300"
+                    >
+                      <Rocket className="mr-2 h-5 w-5 animate-neural-pulse" />
+                      LAUNCH QUANTUM STAKING
+                    </Link>
+                  </motion.div>
+                  <motion.div
+                    custom={{ index: 2, activeIndex, color: '#ffff01' }} // 
+                    variants={glowVariants}
+                    initial="initial"
+                    animate="animate"
+                    className='cyber-rounded'
+                  >
+
+                    {/* Button 3: Buy NFTrees */}
+                    <Link
+                      to="https://nftrees.amicoin.io/explore/nft"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cyber-button  w-full h-16 flex items-center justify-center text-center rounded-cyber font-rajdhani font-bold text-base md:text-lg hover:scale-105 transition-transform duration-300"
+                    >
+                      <Leaf className="mr-2 h-5 w-5 animate-neural-pulse" />
+                      Buy NFTrees
+                    </Link>
+                  </motion.div>
+
+                  {/* Button 4: WATCH DEMO */}
+                  <motion.div
+                    custom={{ index: 3, activeIndex, color: '#00ff00' }} // green
+                    variants={glowVariants}
+                    initial="initial"
+                    animate="animate"
+                    className='cyber-rounded'
+                  >
+                    <Link
+                      to="https://youtu.be/vNXglsMoGvM?si=vTWHE6B_zsfqzL1P"
+                      target="_blank"
+                      className="text-green-500 border-green-500 glass-panel border-glow-purple w-full h-16 flex items-center justify-center text-center rounded-cyber font-rajdhani font-bold text-base md:text-lg text-cyber-purple hover:bg-cyber-purple/10 transition-all duration-300 hover:scale-105"
+                    >
+                      <Play className="mr-2 h-5 w-5" />
+                      WATCH DEMO
+                    </Link>
+                  </motion.div>
+                </motion.div>
+              </div>
+
+
+
 
               {/* Enhanced Stats */}
               <motion.div
@@ -290,7 +383,7 @@ const Home = () => {
 
                 {/* Floating Quantum Elements */}
                 <motion.div
-                  animate={{ 
+                  animate={{
                     y: [-20, 20, -20],
                     rotateZ: [0, 180, 360]
                   }}
@@ -299,9 +392,9 @@ const Home = () => {
                 >
                   <Coins className="h-10 w-10 text-electric-gold animate-neural-pulse" />
                 </motion.div>
-                
+
                 <motion.div
-                  animate={{ 
+                  animate={{
                     y: [20, -20, 20],
                     rotateZ: [360, 180, 0]
                   }}
@@ -312,7 +405,7 @@ const Home = () => {
                 </motion.div>
 
                 <motion.div
-                  animate={{ 
+                  animate={{
                     x: [-15, 15, -15],
                     rotateY: [0, 360, 0]
                   }}
@@ -324,17 +417,17 @@ const Home = () => {
 
                 {/* Central Quantum Core */}
                 <div className="relative z-10 w-80 h-80 mx-auto holographic-card rounded-full flex items-center justify-center">
-                  <motion.div 
+                  <motion.div
                     className="w-60 h-60 bg-gradient-to-br from-electric-gold via-quantum-cyan to-cyber-purple rounded-full flex items-center justify-center relative overflow-hidden"
                     animate={{ rotateZ: 360 }}
                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                   >
                     <Wallet className="h-32 w-32 text-void-black relative z-10" />
-                    
+
                     {/* Inner energy rings */}
                     <div className="absolute inset-4 border-2 border-white/30 rounded-full animate-pulse-glow" />
                     <div className="absolute inset-8 border border-white/20 rounded-full animate-pulse-glow animation-delay-500" />
-                    
+
                     {/* Quantum particles */}
                     {[...Array(8)].map((_, i) => (
                       <motion.div
@@ -436,11 +529,11 @@ const Home = () => {
                       <div className={`text-${page.color} p-4 rounded-cyber w-fit mb-6 group-hover:animate-orbital-rotation transition-all duration-300`}>
                         <page.icon className="h-10 w-10" />
                       </div>
-                      
+
                       <h3 className="text-xl md:text-2xl font-orbitron font-bold text-white mb-4 group-hover:text-gradient-gold transition-all duration-300 break-words">
                         {page.title}
                       </h3>
-                      
+
                       <p className="text-sm md:text-base text-gray-300 font-rajdhani mb-6 leading-relaxed break-words">
                         {page.description}
                       </p>
@@ -473,11 +566,11 @@ const Home = () => {
                       <div className={`text-${page.color} p-4 rounded-cyber w-fit mb-6 group-hover:animate-orbital-rotation transition-all duration-300`}>
                         <page.icon className="h-10 w-10" />
                       </div>
-                      
+
                       <h3 className="text-xl md:text-2xl font-orbitron font-bold text-white mb-4 group-hover:text-gradient-gold transition-all duration-300 break-words">
                         {page.title}
                       </h3>
-                      
+
                       <p className="text-sm md:text-base text-gray-300 font-rajdhani mb-6 leading-relaxed break-words">
                         {page.description}
                       </p>
@@ -543,11 +636,11 @@ const Home = () => {
                     <Star key={i} className="h-5 w-5 text-electric-gold fill-current animate-neural-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-300 mb-6 italic font-rajdhani text-sm md:text-lg leading-relaxed break-words">
                   "{testimonial.content}"
                 </p>
-                
+
                 <div className="flex items-center">
                   <img
                     src={testimonial.avatar}
@@ -597,11 +690,11 @@ const Home = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-orbitron font-bold mb-6 relative z-10 break-words">
               Ready to Enter the <span className="text-gradient-gold">Quantum Realm?</span>
             </h2>
-            
+
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto font-rajdhani relative z-10 break-words leading-relaxed">
               Join over 150,000 users worldwide who are already benefiting from AMMYI's revolutionary DeFi ecosystem. Start earning up to 24% APY, participate in environmental sustainability through NFTrees, and be part of the quantum-powered future of finance.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
               <a
                 href="https://amicoin.io/buyami/User/Buy-now.aspx"
@@ -614,7 +707,7 @@ const Home = () => {
                   BUY AMMYI
                 </span>
               </a>
-              
+
               <Link
                 to="/tokenomics"
                 className="glass-panel border-glow-purple px-6 md:px-8 py-3 md:py-4 rounded-cyber font-rajdhani font-bold text-base md:text-lg text-cyber-purple hover:bg-cyber-purple/10 transition-all duration-300 hover:scale-105"
